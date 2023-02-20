@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 le=LabelEncoder()
-df= pd.read_csv("fish.csv")
+df= pd.read_csv("Fish.csv")
 df['Species']=le.fit_transform(df['Species'])
 
 x=df.iloc[:,:-1]
