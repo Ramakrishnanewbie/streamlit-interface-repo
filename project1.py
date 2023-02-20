@@ -39,6 +39,12 @@ else:
 
 li=[ft,length1,length2,length3,height,width]
 
-x=model.predict([li])
-st.write(x)
-st.text(x)
+if st.button("Submit"):
+	x=model.predict([li])
+	if x<0:
+		st.error("ERROR change the dimensions as the negative weight is not possible !")
+	else:
+
+		c1,c2,c3=st.columns([1,2,3])
+		c1.success("Weight"+"  "+" is")
+		c2.info(x)
